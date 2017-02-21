@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:image"
+	content="http://www.locogram.com/images/lg.png" />
+
+<meta name="author" content="">
+<link rel="image_src"
+	href="http://www.locogram.com/images/locogram_logo.png" />
+<meta name="description" content="Discover Amazing Styles" />
+
+<!-- "The premier discovery and shopping platform for women’s apparel & accessories! Find all the products, sales and new arrivals from thousands of local and chain stores in the US."	-->
+<!-- "A virtual mall of local boutiques on your mobile phone! Search your favorite style, discover latest trends & sale, and browse product catalogs of local boutiques all in one place." -->
+
+<title>Locogram</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- <link href="css/bootstrap-editable.css" rel="stylesheet" /> -->
+<link href="css/bootstrap-select.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/price-range.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/yamm.css">
+<link href="css/nav-responsive.css" rel="stylesheet">
+<link href="css/sharestyles.min.css" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="css/jcarousel.css"> -->
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<link rel="shortcut icon" href="images/ico/favicon.ico"
+	type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="images/ico/apple-touch-icon-57-precomposed.png">
+
+<!-- Google Analytics Code -->
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js',
+          'ga');
+
+  ga('create', 'UA-57870220-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics Code -->
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function() {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+  }(window, document, 'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1741743646047705');
+  fbq('track', "PageView");
+</script>
+<noscript>
+	<img height="1" width="1" style="display: none"
+		src="https://www.facebook.com/tr?id=1741743646047705&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+</head>
+<!--/head-->
+<body>
+	<header id="header">
+		<!--header-->
+		<div class="header-middle">
+			<!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-5">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/locogram_logo.png"
+								alt="Locogram" width="150" /></a>
+							<!-- <br><span style="font-size: 12px; display: inline-block; padding-top: 8px;">A premier shopping platform for women clothing</span> -->
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-7">
+						<div class="shop-menu pull-right">
+							<span id="login" style="display: none;"> <a
+								href="javascript:void(0)" onclick="login.modal()"><i
+									class="fa fa-user"></i> <span id="usernamelbl">Login
+										&nbsp;</span>&nbsp;</a>
+							</span> <span id="pprofile" style="display: none;"> <a
+								href="javascript:void(0)" onclick="_preferences.modal()"><i
+									class="fa fa-gear"></i> Personalize &nbsp;</a></span><span><a
+								href="javascript:$.goFavorites()"><i class="fa fa-heart"></i>
+									Wish List </a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<!--header-bottom-->
+			<div class="container">
+				<div class="yamm" id="nav">
+					<button class="navbar-toggle" data-target="#navbar-collapse-1"
+						data-toggle="collapse" type="button">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<nav class="navbar-collapse collapse" id="navbar-collapse-1">
+						<img src='images/site/loading32x32.gif' />
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--/header-->
+	<section id="slider" style="min-height: 400px">
+		<div class="home-overlay">
+			<div class="col-xs-12 col-sm-3 nopadding"
+				style="background: url('images/site/wbg1.jpg'); background-size: cover; z-index: 10;">
+				<div class="top-box main-box">
+					<a href="#" data-link="college" class="top-nav">
+						<div class="header">
+							<h4>College Styles</h4>
+						</div>
+						<div class="black-overlay"></div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 nopadding"
+				style="background: url('images/site/wbg2.png' ); background-size: cover; z-index: 10;">
+				<div class="top-box main-box">
+					<a href="#" data-link="shop25" class="top-nav">
+						<div class="header">
+							<h4>Under $25</h4>
+						</div>
+						<div class="black-overlay"></div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 nopadding"
+				style="background: url('images/site/wbg3.jpg'); background-size: cover; z-index: 10;">
+				<div class="top-box main-box">
+					<a href="#" data-link="sale50" class="top-nav">
+						<div class="header">
+							<h4>Sale Over 50%</h4>
+						</div>
+						<div class="black-overlay"></div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-3 nopadding"
+				style="background: url('images/site/wbg4.jpg'); background-size: cover; z-index: 10;">
+				<div class="top-box main-box">
+					<a href="#" data-link="boutique" class="top-nav">
+						<div class="header">
+							<h4>Go Local</h4>
+						</div>
+						<div class="black-overlay"></div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="visible-xs" style="height: 1190px"></section>
+	<section style="margin: 25px 0 15px 0;">
+		<div class="container">
+			<div style="text-align: center;">
+				<h1 class='title'>
+					<span><i>Explore</i> New Designs</span>
+				</h1>
+				<p>See what styles are trending and active store promotions.</p>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 nopadding">
+					<div class="row" style="margin: 5px">
+						<div class="col-xs-12 col-sm-12 nopadding"
+							style="background: url('images/site/mall.jpg'); background-position:center; background-size: cover; z-index: 10;">
+							<div>
+								<div class="top-box main-box">
+									<a href="javascript:void(0)" id="createMall">
+										<div class="header">
+											<h4>
+												<span id="mall_lbl">Create your </span><i>Mall</i>
+											</h4>
+										</div>
+										<div class="side-overlay"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 nopadding">
+					<div class="row" style="margin: 5px">
+						<div class="col-xs-12 col-sm-12 nopadding"
+							style="background: url('images/site/wbg6.jpg'); background-position:center; background-size: cover; z-index: 10;">
+							<div>
+								<div class="top-box side-box">
+
+									<a href="#" id="styles_lnk">
+										<div class="header">
+											<h4>
+												Trending <i>Styles</i>
+											</h4>
+										</div>
+										<div class="side-overlay"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin: 5px">
+						<div class="col-xs-12 col-sm-12 nopadding"
+							style="background: url('images/site/wbg5.jpg'); background-position:center; background-size: cover; z-index: 10;">
+							<div>
+								<div class="top-box side-box">
+
+									<a href="#" id="store_promo_lnk">
+										<div class="header">
+											<h4>
+												Store <i>Promotions</i>
+											</h4>
+										</div>
+										<div class="side-overlay"></div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class='offers animated fadeInUp' id="s11"
+		style="display: none; margin: 25px 0 15px 0;">
+		<div class="container">
+			<div style="text-align: center;">
+				<h1 class='title'>
+					<span><i>Popular </i>Malls</span>
+				</h1>
+				<p>Checkout new fashion collections from people around you.</p>
+
+			</div>
+			<div class="gallery-07 recommended_items">
+				<div id="malls_nav" class="crsl-nav">
+					<a href="#" class="previous"><i class="fa fa-angle-left"></i></a> <a
+						href="#" class="next">&gt;</a>
+				</div>
+				<div id="crsl-wrap-mall-item" class="crsl-items"
+					data-navigation="malls_nav">
+					<div id="crsl-wrap-mall" class="crsl-wrap"></div>
+				</div>
+				<div style="text-align: center; margin: 10px 0">
+					<a href="javascript:seeAllMalls()" class="btn btn-primary">SHOW
+						MORE</a>
+				</div>
+				<!-- <div class="row"></div> -->
+			</div>
+		</div>
+	</section>
+	<section class='offers animated fadeInUp' id="s12"
+		style="display: none; margin: 25px 0 15px 0;">
+		<div class="container">
+			<div style="text-align: center;">
+				<h1 class='title'>
+					<span><i>Popular </i>Fashion Stores</span>
+				</h1>
+				<p>Discover new stores around you.</p>
+
+			</div>
+			<div class="gallery-07 recommended_items">
+				<div id="stores_nav" class="crsl-nav">
+					<a href="#" class="previous"><i class="fa fa-angle-left"></i></a> <a
+						href="#" class="next">&gt;</a>
+				</div>
+				<div id="crsl-wrap-store-item" class="crsl-items"
+					data-navigation="stores_nav">
+					<div id="crsl-wrap" class="crsl-wrap"></div>
+				</div>
+
+				<div style="text-align: center; margin: 10px 0">
+					<a href="javascript:seeAllStores()" class="btn btn-primary">SHOW
+						MORE</a>
+				</div>
+				<div class="row"></div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer id="footer">
+		<!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row" style="margin-bottom:15px;">
+					<div class="col-xs-12">
+						<ul class="list-inline">
+						<li><h3>Get the App</h3></li>
+							<li><a
+								href="http://play.google.com/store/apps/details?id=com.locogram.android.aapp">
+									<img width="110" src="images/play_store.png">
+							</a></li>
+							<li><a
+								href="http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=658873717&amp;mt=8"><img
+									width="125" src="images/app_store.png"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row" >
+					<div class="col-xs-6 col-sm-8">
+						<ul class="list-inline">
+							<li><a href="about.html" title="" rel="nofollow">About
+									Us</a></li>
+							<li><a href="privacy.html" title="" rel="nofollow">Privacy
+									Policy</a></li>
+							<li><a href="terms.html" title="" rel="nofollow">Terms
+									of Use</a></li>
+							<li><a href="#" onclick="contactModal.modal();">Contact
+									Us</a></li>
+							<li><a href="api.html"><span>API</span> <span
+									class="beta">BETA</span></a></li>
+							<!-- <li><a href="storefront.html"><span
+									style="font-family: 'Verdana'">StoreFront</span> <span
+									class="beta">BETA</span></a></li> -->
+						</ul>
+					</div>
+					<div class="col-xs-6 col-sm-4">
+						<ul class="social-icons list-inline  pull-right">
+							<li>Follow us on:</li>
+							<li><a href="https://www.facebook.com/locogram"><i
+									class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/locograminfo"><i
+									class="fa fa-twitter"></i></a></li>
+							<li><a href="https://instagram.com/fashion.locogram"><i
+									class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.pinterest.com/locogram"><i
+									class="fa fa-pinterest"></i></a></li>
+						</ul>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+	<a href="#" class="back-to-top"><i class='fa fa-arrow-up fa-lg'></i></a>
+	<!--/Footer-->
+	<div id="pref_modal" style="display: none;" class="modal fade"></div>
+	<div id="preview_modal" style="display: none;" class="modal fade"></div>
+	<div id="contact_modal" style="display: none;" class="modal fade"></div>
+	<script src="js/jquery.js"></script>
+
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-popover.min.js"></script>
+	<script src="js/bootstrap-editable.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/ShareButton.min.js"></script>
+	<script src="js/responsiveCarousel.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/handlebars-1.0.rc.1.min.js"></script>
+	<script src="js/jquery-loader.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script id="shop-template" type="x-handlebars-template">
+	{{#each this}}
+					<div class="crsl-item">
+							<div class="shop_pin">
+								<a data-id="{{id}}" href="shops.html?token={{../token}}&amp;id={{id}}">
+								<div onclick="seeShop({{id}})" class="shop_image" style='background-image:url("{{image_url}}")' >
+								</div>
+								</a>
+								<div class="pin_desc">
+									<a href="shops.html?token={{../token}}&amp;id={{id}}"><span>{{name}} </span></a>
+{{#if Favorite}}<a style="float:right;"
+							href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="shop" title="Remove from my mall" ><i
+							class="fa fa-times fa-lg" ></i>{{else}}<a style="float:right;"
+							href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="shop" title="Add to my mall" ><i
+							class="fa fa-plus fa-lg" ></i>{{/if}}</a>
+								</div>
+							</div>
+						</div>
+{{/each}}</script>
+	<script id="malls-template" type="x-handlebars-template">
+	{{#each this}}
+					<div class="crsl-item" onclick="seeMall({{id}})">
+							<div class="shop_pin"  onclick="seeMall({{id}})">
+								<div style="height:180px;  background: url('{{image_url}}'); background-size: cover; z-index: 10;">
+									<a data-id="{{id}}" href="mall.html?token={{../token}}&amp;id={{id}}">
+									<div class="header">
+										<div class="photo" >
+										<img class="avatar" src="{{photo_url}}" style="z-index:1000"/>
+									</div>
+									<div class="black-overlay" style="margin-top:1px; height:180px;"></div>
+								</div>
+								</a>
+								</div>
+								<div class="pin_desc">
+									<a href="malls.html?token={{../token}}&amp;id={{id}}"><span>{{name}} </span></a>
+									<a style="float:right;" href="javascript:void(0);" data-id="{{id}}" >{{no_views}} <i
+										class="fa fa-eye"></i></a>
+									<a style="float:right;" href="javascript:void(0);" data-id="{{id}}" >{{no_followers}} <i
+										class="fa fa-users"></i>&nbsp;</a>
+									<!--<a style="float:right;" href="javascript:void(0);"  
+										onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="mall"
+										>{{#if Favorite}}<i class="fa fa-minus-circle fa-lg"></i> 
+											{{else}}<i class="fa fa-plus-circle fa-lg"></i></a>{{/if}}-->
+								</div>
+							</div>
+						</div>
+{{/each}}</script>
+	<div id="login_modal" class="modal fade" style="display: none;">
+		<div class=" modal_content modal-dialog modal-lg"
+			style="max-width: 500px; width: 100%; opacity: 1; margin: 30px auto; padding: 25px 30px 0 30px; min-width: 320px;">
+			<div class="modal_header clearfix">
+				<p>
+					<a href="javascript:void(0)">Login</a>
+				</p>
+				<a href="javascript:void(0);" id="modal_close" data-dismiss="modal">Close<i>X</i></a>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="modal_pic col-xs-12">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="inputEmail" class="control-label col-xs-3">Email</label>
+								<div class="col-xs-9">
+									<input type="email" class="form-control" id="email"
+										placeholder="Email">
+									<!--
+									<p class="help-block" style="margin-bottom: 0">Email is
+										used to sync your preferences across multiple devices</p>
+									-->
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="name" class="control-label col-xs-3">Name</label>
+								<div class="col-xs-9">
+									<input class="form-control" id="name" placeholder="Name">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-xs-12">
+						<div class="fb_login">
+							<hr>
+							<div class="fb_or">OR</div>
+							<a href="javascript:void(0)"
+								onclick="javascript:login.loginFB();"> <img
+								src="images/site/fb.png" border="0" alt=""></a>
+							<!-- <fb:login-button scope="public_profile,email"
+								onlogin="login.checkLoginState();">
+							</fb:login-button> -->
+							<input type="hidden" id="fbId"> <input type="hidden"
+								id="mallId" />
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" onclick="javascript:login.saveChanges()"
+					class="btn btn-default">Login</button>
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'>
+    ////FB CODE 
+
+    ////FB CODE 
+    $('.divider').loader({
+      ID: 'offer_loader',
+      autoCheck: 32,
+      size: 32,
+      imgUrl: 'images/site/loading[size].gif'
+    });
+
+    _preferences.ready(function() {
+      login.init();
+
+      //initializing offers section
+      /* offers.page = "index";
+      offers.init(0, "", offers.onSuccess, function(data) {
+      	$('#s11').show();
+      	$('#offers').masonry('layout');
+      	$.initPrettyPhoto(data);
+      }); */
+      stores.page = "index";
+      stores.init(0, "", stores.onSuccess, function(data) {
+        $('#s12').show();
+      });
+
+      malls.page = 'index';
+      malls.init(malls.page, malls.onSuccess, function(data) {
+        $('#s11').show();
+      });
+      /* styles.page = "index";
+      //init styles 
+      styles.init(0, "", styles.onSuccess, function(data) {
+      	$('#s13').show();
+      	$('#styles').masonry('layout');
+      	$.initPrettyPhoto(data);
+      }); */
+    });
+    $('#styles_lnk').click(function() {
+      window.location.href = 'styles.html?token=' + _preferences.token();
+    })
+    $('#store_promo_lnk').click(function() {
+      window.location.href = 'offers.html?token=' + _preferences.token();
+    });
+    $('.top-nav').click(
+            function() {
+              window.location.href = 'products.html?token='
+                      + _preferences.token() + '&c=CLOTHING&s=Dresses&f='
+                      + $(this).data("link");
+            })
+
+    /* function seeAllStyles() {
+    	window.location.href = 'styles.html?token=' + _preferences.token();
+    } */
+
+    /* function seeAllOffers() {
+    	window.location.href = 'offers.html?token=' + _preferences.token();
+    } */
+    function seeShop(id) {
+      window.location.href = 'shops.html?token=' + _preferences.token()
+              + '&id=' + id;
+    }
+  </script>
+</body>
+</html>

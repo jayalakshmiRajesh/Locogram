@@ -1,0 +1,48 @@
+<script type="text/x-handlebars-template">
+{{#each this}}​
+<div class="pin">
+	<a href="javascript:void(0)" onclick="products.modal('{{id}}', '{{ref}}')"> 
+	<img src="{{image_url}}" onerror="$.errorImage(this, '{{id}}')">
+	</a>
+	<div class='desc clearfix'>
+		<div class="match" >
+		<a href="javascript:void(0)"  onclick="products.modal('{{id}}', '{{ref}}')"> 
+		<span class="title">{{title}}</span>
+		</a><br>
+		<a href="shops.html?token={{../token}}&amp;id={{merchant_id}}&amp;pid={{id}}" target="_blank">
+			<span class="merchant" >{{merchant}}</span>
+		</a>
+		</div> 
+		<div style="text-align:right">
+			{{#ifzero mrp}}
+				<span class='mrp'>${{mrp}}</span><br>
+				<span class="price">${{price}}
+					<div><a
+							href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="Product" >{{#if Favorite}}<i
+							class="fa fa-heart fa-lg"></i>{{else}}<i
+							class="fa fa-heart-o fa-lg"></i>{{/if}}</a>
+							</div>
+				</span>
+			{{else}}
+				{{#ifzero price}}
+					<span class="price">${{price}}
+						<div><a
+							href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="Product" >{{#if Favorite}}<i
+							class="fa fa-heart fa-lg"></i>{{else}}<i
+							class="fa fa-heart-o fa-lg"></i>{{/if}}</a>
+						</div>
+					</span>
+				{{else}}
+						<div><a
+							href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="Product" >{{#if Favorite}}<i
+							class="fa fa-heart fa-lg"></i>{{else}}<i
+							class="fa fa-heart-o fa-lg"></i>{{/if}}</a>
+						</div>
+				{{/ifzero}} 
+			{{/ifzero}}
+		</div>
+		
+	</div>
+</div>
+{{/each}}
+</script>

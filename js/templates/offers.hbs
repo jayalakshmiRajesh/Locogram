@@ -1,0 +1,13 @@
+<script type="text/x-handlebars-template">
+{{#each this}}​
+	<div class="pin"><a rel='prettyPhoto' href="{{image_url}}" data-msg="{{message}}"   data-image='{{image_url}}' data-url='{{url}}' data-id='{{id}}' data-type='{{getType this}}' data-m_id="{{merchant_id}}" data-merchant="{{merchant}}" 
+			data-title="<a href='shops.html?token={{../token}}&amp;id={{merchant_id}}'><span style='font-size:15px;font-weight:600;margin-bottom:8px;display:block;'>{{merchant}}</span></a>{{#if message}}<div style='margin-bottom:8px;'>{{message}}</div>{{/if}}{{#if url}}<a href='{{url}}' target='_ext'><i class='fa fa-globe'></i> Website </a>{{/if}} <share-button class="sb"></share-button>">
+		<img attr="{{getimageheight 255 image_width image_height }}" width="255" 
+			src="{{image_url}}" /></a>
+		<div class="pin_desc">
+		<a href="shops.html?token={{../token}}&amp;id={{merchant_id}}"><span>{{merchant}}</span</a>
+		<div>{{#if created}} <i class='fa fa-clock-o'></i> {{created}}{{/if}}</div>
+		</div>
+	</div>
+	{{/each}}
+</script>

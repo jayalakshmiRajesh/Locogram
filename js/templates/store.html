@@ -1,0 +1,19 @@
+<script type="x-handlebars-template">
+{{#each stores}}
+<div class="pin">
+		<a href="shops.html?token={{../token}}&amp;id={{id}}">
+		<img attr="{{getimageheight 255 image_width image_height }}" width="255" height=160 
+			src="{{image_url}}" onerror="$.errorImage(this,'{{id}}')"/>
+		</a>
+		<div class="pin_desc">
+		<a href="shops.html?token={{../token}}&amp;id={{id}}"><span>{{name}}</span></a>
+		{{#if Favorite}}<a style="float:right;" title="Remove from my mall"
+							href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="shop" ><i
+							class="fa fa-times fa-lg" ></i>{{else}}
+<a style="float:right;" title="Add to my mall"
+							href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="shop" ><i
+							class="fa fa-plus fa-lg"></i>{{/if}}</a>
+		</div>
+</div>
+{{/each}}
+</script>

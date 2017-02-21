@@ -1,0 +1,58 @@
+<script type="text/x-handlebars-template">
+<div data-type="mall" data-image="{{sharable_image_url}}" data-url="{{sharable_url}}" data-title="{{sharable_text}}" data-name="{{name}}">
+					<div class="col-xs-7  col-sm-7" id="mall-info-content" >
+						<h2>{{name}}</h2>
+						<br/>
+						<div>
+							<i class="fa fa-eye "></i> {{no_views}} Visitors
+						</div>
+						<div>
+							<a href="javascript:void(0);"
+								data-id="{{id}}" onclick="$.followers()"> <i class="fa fa-users"></i> {{no_followers}} Followers
+							</a>
+						</div>
+						{{#if mymall}}
+						<div>
+							<a href="javascript:void(0);"  
+							onclick="malls.getLink(this)" data-id="{{id}}" data-type="mall" data-url="{{sharable_url}}"
+							><i class="fa fa-link fa-lg"></i> Get Sharable Link</a>
+						</div>
+						{{else}}
+						<div>
+							{{#if Favorite}}<a href="javascript:void(0);"  
+							onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="mall" title="Remove from my favorite malls"><i class="fa fa-times fa-lg" ></i> Unfollow This Mall</a>
+							{{else}}<a href="javascript:void(0);"  
+							onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" data-type="mall"  title="Add to my favorite malls"><i class="fa fa-plus fa-lg"></i> Follow This Mall</a>{{/if}}
+						</div>
+						{{/if}}
+						<share-button class="mall"></share-button>
+						
+						
+					</div>
+					<div class="col-xs-3 col-sm-5 col-md-3 pull-right">
+						<div class="avatar-box">
+							{{#if mymall}}
+							{{#if photo_url}}
+							<a href="javascript:void(0)" onclick="malls.changePhoto()" > 
+								<img class="avatar" src="{{photo_url}}" alt="avatar" width=100 height="100" />
+							</a>
+							{{else}}
+							<a href="javascript:void(0)" onclick="malls.changePhoto()" > 
+								<img class="avatar" src="images/site/avatar.png" alt="avatar" width=100 height="100" />
+							</a>
+							{{/if}}
+							{{else}}
+							{{#if photo_url}}
+							<img class="avatar" src="{{photo_url}}" alt="avatar" width=100 height="100" />
+							{{else}}
+								<img class="avatar" src="images/site/avatar.png" alt="avatar" width=100 height="100" />
+							{{/if}}
+							{{/if}}
+						<!--{{#if mymall}}
+							<br/>
+							<a id="changePhoto" href="javascript:void(0)" >Change Photo</a>
+						{{/if}}->
+						</div>
+					</div>
+</div>
+</script>

@@ -1,0 +1,40 @@
+<script type="text/x-handlebars-template">
+	<div id="modal_content" class="modal_content modal-dialog modal-lg" style="max-width:500px; width:100%;opacity: 1; margin:30px auto; padding: 25px 30px 0 30px;min-width:320px;">
+		<div class="modal_header clearfix">
+			<p>
+				<a href="javascript:void(0)">{{title}}</a>
+			</p>
+			<a href="javascript:void(0);" id="modal_close" data-dismiss="modal">Close<i>X</i></a>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="modal_pic col-xs-12">
+					<h3>{{subtitle}}</h3>
+					<img width="100%" src="{{image}}" />
+				</div>
+				
+					<form id="contest_form" class="form-horizontal col-xs-12">
+					<div class="form-group">
+							<label for="inputEmail" class="control-label">Email</label>
+							 <div class="">
+								<input type="email" class="form-control" id="email_c" 
+									placeholder="e.g. johndoe@gmail.com" required>
+								  <p class="help-block" style="display:none">Please enter a valid email address</p>
+							</div>
+					</div>
+					<div class="form-group">
+							<label for="inputPrice" class="control-label">{{placeholder}}</label>
+    						<div class="">
+							<input type="text" class="form-control" id="price_c" placeholder="" required>
+							<p class="help-block" style="display:none">Please enter some value </p>
+							</div>
+					</div>
+					</form>
+				
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" onclick="javascript:contest.submit()" class="btn btn-default">Submit</button>
+		</div>
+	</div>
+</script>

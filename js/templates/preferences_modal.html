@@ -1,0 +1,169 @@
+<script type="text/x-handlebars-template">
+	<div class="modal_content modal-dialog modal-lg" style="max-width:500px; width:100%;opacity: 1; margin:30px auto; padding: 25px 30px 0 30px;min-width:320px;">
+		<div class="modal_header clearfix">
+			<p>
+				<a href="javascript:void(0)">Help Us Personalize Your Results</a>
+			</p>
+			<a href="javascript:void(0);" id="modal_close" data-dismiss="modal">Close<i>X</i></a>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="modal_pic col-xs-12">
+					<form class="form-horizontal">
+						<!--
+						<div class="form-group">
+        					<label class="col-sm-12 control-label">What is your age group?</label>
+        					<div class="col-sm-12">
+            				<label class="radio-inline"> <input type="radio" name="age" value="18-24">18-24</label>
+            				<label class="radio-inline"> <input type="radio" name="age" value="24-30">24-30</label>
+            				<label class="radio-inline"> <input type="radio" name="age" value="30+">30+</label>
+        					</div>
+    					</div>
+    					-->
+    					<div class="form-group">
+        					<label class="col-sm-12 control-label">What is your preferred size?</label>
+        					<div class="col-sm-12">
+            				<label class="radio-inline"> <input type="radio" name="size" value="XSmall">XS (00-0)</label>
+            				<label class="radio-inline"> <input type="radio" name="size" value="Small">S (2-4)</label>
+            				<label class="radio-inline"> <input type="radio" name="size" value="Medium">M (6-8)</label>
+            				<label class="radio-inline"> <input type="radio" name="size" value="Large">L (10-12)</label>
+            				<label class="radio-inline"> <input type="radio" name="size" value="XLarge">XL (14-16)</label>
+            				<label class="radio-inline"> <input type="radio" name="size" value="Plus">Plus</label>
+        					</div>
+    					</div>
+    					<div class="form-group">
+        					<label class="col-sm-12 control-label">What is your preferred price budget?</label>
+        					<div class="col-sm-12">
+        					<label class="radio-inline"> <input type="radio" name="budget" value="$25">$25</label>
+            				<label class="radio-inline"> <input type="radio" name="budget" value="$50">$50</label>
+            				<label class="radio-inline"> <input type="radio" name="budget" value="$100">$100</label>
+							<label class="radio-inline"> <input type="radio" name="budget" value="$200">$200</label>
+							<label class="radio-inline"> <input type="radio" name="budget" value="$300">$300</label>
+							<label class="radio-inline"> <input type="radio" name="budget" value="All">All</label>
+        					</div>
+    					</div>
+						<div class="form-group">
+        					<label class="col-sm-12 control-label">Where do you love to shop?</label>
+        					<div class="col-sm-12">
+            				<label class="radio-inline"> <input type="radio" name="store" value="Brand Stores">Brand Stores</label>
+            				<label class="radio-inline"> <input type="radio" name="store" value="Boutiques">Boutiques</label>
+            				<label class="radio-inline"> <input type="radio" name="store" value="Both">Both</label>
+        					</div>
+    					</div>
+						<div class="form-group">
+        					<label class="col-sm-12 control-label">Interested in discovering items from new stores?</label>
+        					<div class="col-sm-12">
+            				<div  class="radio"> <input type="radio" name="discovery" value="No">No, I wear popular brands</div>
+            				<div class="radio"> <input type="radio" name="discovery" value="Yes">Yes, I love exploring new brands/stores</div>
+        					</div>
+    					</div>
+
+						<!--<div class="form-group">
+							<label for="bodyType" class="control-label col-xs-3">Size Prefs</label>
+							<div class="col-xs-9">
+								<select id='btype' class="form-control">
+									<option value="">--Select--</option>
+									<option value="Regular">Regular</option>
+									<option value="Petite">Petite</option>
+									<option value="Plus">Plus</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="pref" class="control-label col-xs-3">Style Prefs</label>
+							<div class="col-xs-9">
+								      <select id="pref" class="selectpicker" multiple>
+         								 <option>Teen</option>
+   									       <option>College</option>
+   									       <option>Professional</option>
+											<option>High end</option>
+  								    </select>
+							</div>
+						</div> -->
+					</form>
+					<!--
+					<ul class="nav nav-tabs" id="prefTab">
+						<li class="active"><a href="#clothing">Clothing</a></li>
+						<li><a href="#shoes">Shoes</a></li>
+					</ul>
+					
+					<div class="tab-content">
+						<div id="clothing" class="tab-pane fade in active">
+							{{#iflist this.COLOR}}
+							<div id="color-panel" class="color-panel">
+								<h3>Color <a onclick="_preferences.clearFilter('color-panel')"   class="pull-right" style="display:none;font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+		
+								<ul>
+									{{#each COLOR}}
+									<li id="fc_{{@index}}" onclick="_preferences.applyFilter(this,'color-panel')"><a
+										href="javascript:void(0);" style='background-color: #{{this}}'></a></li>
+									{{/each}}
+								</ul>
+							</div>
+							{{/iflist}}
+							
+							{{#iflist this.PRICE}}
+								<div id="price-panel" class="size-panel">
+									<h3>Price <a onclick="_preferences.clearFilter('price-panel')"  class="pull-right" style="display:none;font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+									<ul style='padding: 0; margin: 0'>
+										{{#each this.PRICE}}
+										<li id="fp_{{@index}}" onclick="_preferences.applyFilter(this, 'price-panel')"><a href="javascript:void(0)">{{this}}</a></li>
+										{{/each}}
+									</ul>
+								</div>
+							{{/iflist}}
+							{{#iflist this.SIZE.CLOTHING}}
+							<div id="size-panel" class="size-panel"><h3>Size<a onclick="_preferences.clearFilter('size-panel')" class="pull-right" style="display:none;font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+									<ul>
+									{{#each this.SIZE.CLOTHING}}
+										<li onclick="_preferences.applyFilter(this, 'size-panel')"><a href="javascript:void(0);">{{this}}</a></li>
+									{{/each}}
+									</ul>
+							</div>
+							{{/iflist}}				
+						</div>
+						<div id="shoes" class="tab-pane fade">
+							{{#iflist this.COLOR}}
+							<div id="scolor-panel" class="color-panel">
+								<h3>Color <a onclick="_preferences.clearFilter('scolor-panel')"   class="pull-right" style="display:none;font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+		
+								<ul>
+									{{#each COLOR}}
+									<li id="sfc_{{@index}}" onclick="_preferences.applyFilter(this,'scolor-panel')"><a
+										href="javascript:void(0);" style='background-color: #{{this}}'></a></li>
+									{{/each}}
+								</ul>
+							</div>
+							{{/iflist}}
+							
+							{{#iflist this.PRICE}}
+								<div id="sprice-panel" class="size-panel">
+									<h3>Price <a onclick="_preferences.clearFilter('sprice-panel')"  class="pull-right" style="display:none;font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+									<ul style='padding: 0; margin: 0'>
+										{{#each this.PRICE}}
+										<li id="sfp_{{@index}}" onclick="_preferences.applyFilter(this, 'sprice-panel')"><a href="javascript:void(0)">{{this}}</a></li>
+										{{/each}}
+									</ul>
+								</div>
+							{{/iflist}}
+							{{#iflist this.SIZE.SHOES}}
+							<div id="ssize-panel" class="size-panel"><h3>Size<a onclick="_preferences.clearFilter('ssize-panel')" class="pull-right" style="display:none;font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+									<ul>
+									{{#each this.SIZE.SHOES}}
+										<li id="sfs_{{@index}}" onclick="_preferences.applyFilter(this, 'ssize-panel')"><a href="javascript:void(0);">{{this}}</a></li>
+									{{/each}}
+									</ul>
+							</div>
+							{{/iflist}}	
+						</div>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<!-- 			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+			<button type="button" onclick="javascript:_preferences.saveChanges()" data-dismiss="modal" class="btn btn-default">Save changes</button>
+		</div>
+	</div>
+</script>

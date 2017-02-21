@@ -1,0 +1,91 @@
+<script type="text/x-handlebars-template">
+	<div class="modal_content modal-dialog modal-lg" style="opacity: 1;" data-type="product" data-price="{{price}}" data-title="{{title}}" data-merchant="{{merchant}}" data-image="{{sharable_image_url}}" data-url="{{sharable_url}}">
+		<div class="modal_header clearfix">
+		<p><a href="shops.html?token={{token}}&amp;id={{merchant_id}}&amp;pid={{id}}" title="Visit {{merchant}}" target="_blank">{{merchant}}</a></p>
+			<a href="javascript:void(0);" id="modal_close" data-dismiss="modal">Close<i>X</i></a>
+		</div>
+		<div class="row">
+			<div class="">
+				<div class="modal_pic col-xs-12  col-sm-6 col-md-6">
+					<div class="connected-carousels">
+						<div class="stage">
+							<div class="carousel carousel-stage">
+								<ul>
+									{{#each this.gallery}}
+									<!-- <li><img src="{{this}}" width="100%" alt=""></li> -->
+									<li><img src="{{this}}" width="250" alt=""></li>
+									{{/each}}
+								</ul>
+							</div>
+							<!-- 							<a href="#" class="prev prev-stage"><span>&lsaquo;</span></a> <a -->
+							<!-- 								href="#" class="next next-stage"><span>&rsaquo;</span></a> -->
+						</div>
+
+						<div class="navigation">
+							<a href="#" class="prev prev-navigation">&lsaquo;</a> <a href="#"
+								class="next next-navigation">&rsaquo;</a>
+							<div class="carousel carousel-navigation">
+								<ul>
+									{{#each gallery}}
+									<li><img src="{{this}}" width="75" height="75" alt=""></li> {{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 					<a href="javascript:void(0);"><img width="100%" alt="" -->
+					<!-- 						src="https://us.locogram.com/img/images/updates/14573/555b5fb6d6372.jpg" -->
+					<!-- 						draggable="false"></a> -->
+				</div>
+
+				<div class="modal_desc col-xs-12 col-sm-6 col-md-6">
+					<div class="modal_title  clearfix">{{title}}</div>
+
+					<div class="modal_price">
+<!-- 						<div class="pull-left modal_name"><a href={{merchant_url}}>{{merchant}}</a></div> -->
+						
+						<div class="pull-left">
+						{{#ifzero mrp}}
+						<span class='modal_mrp'>${{mrp}}</span>
+						{{/ifzero}} 
+						{{#ifzero price}}
+						<span>${{price}}</span>
+						{{/ifzero}} 
+						</div>
+					</div>
+					{{#iflist color}}
+					<div class="modal_color">
+						<p>Available color</p>
+						{{#each color}} <a href="javascript:void(0);"
+							style="background-color: #{{this}}" ></a> {{/each}}
+					</div>
+					{{/iflist}} {{#iflist size}}
+					<div class="modal_size">
+						<div class="clearfix">
+							<p class="pull-left">Available size</p>
+						</div>
+						{{#each size}} <a href="javascript:void(0);" class="sizeXS">{{this}}</a>
+						{{/each}}
+					</div>
+					{{/iflist}}
+					<div class="modal_btn">
+						<a href="{{url}}" target="_ext" class="add_bag"><i
+							class="fa fa-shopping-cart"></i> Buy</a>
+						<share-button class="sb"></share-button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="recommendation">YOU MAY ALSO LIKE</div>
+			<div class="col-xs-12">
+			{{#each products}}
+			<a  href="javascript:void(0)" data-id={{id}} onclick="products.loadProductModal(this)">
+			<div class="recommend">
+				<img src="{{thumbnail_url}}" width="80" height="100"/>
+			</div>
+			</a>
+			{{/each}}
+			</div>
+		</div>
+	</div>
+</script>

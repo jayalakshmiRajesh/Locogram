@@ -1,0 +1,32 @@
+<script type="text/x-handlebars-template">
+<div class="modal_content modal-dialog modal-lg"
+	style="max-width: 500px; width: 100%; opacity: 1; margin: 30px auto; padding: 25px 30px 0 30px; min-width: 320px;"
+	data-type="{{type}}" data-msg="{{msg}}" data-merchant="{{merchant}}"
+	data-image="{{image_url}}" data-url="{{url}}">
+	<div class="modal_header clearfix">
+		<p>
+			<a href="javascript:void(0)">Followers</a>
+		</p>
+		<a href="javascript:void(0);" id="modal_close" data-dismiss="modal">Close<i>X</i></a>
+	</div>
+	<div class="row">
+		{{#each followers}}
+		 <div class="col-sm-12">
+			<div class="follower">
+				<a href="mall.html?token={{../token}}&amp;id={{id}}">
+					<div class="header">
+						<div class="photo" style="float: left;width:40px;height:40px;">
+							<img height="40" width="40" style="z-index: 1000"
+								src="{{photo_url}}"
+								class="avatar" alt="{{mall}}">
+						</div>
+
+					</div>
+					<div class="content">{{name}}</div>
+				</a>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</div>
+</script>

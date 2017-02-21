@@ -1,0 +1,91 @@
+<script type="text/x-handlebars-template">
+<span class="visible-xs" style="cursor:pointer;border-bottom:1px solid #eee;"> 
+<span onclick="javascript:$('#accordian').toggleClass('hidden-xs');">Categories <i class="fa fa-caret-down"></i></span>
+<span class="pull-right" onclick="javascript:$('#refine').toggleClass('hidden-xs');">Refine By <i class="fa fa-caret-down"></i></span>
+</span>
+<div id="accordian" class="panel-group  category-products hidden-xs">
+{{#each this.category}}{{#ifsubmenu ../this this}}<div class="panel panel-default">
+		<div class="panel-heading" onclick="$(this).find('span')[0].click();">
+			<h4 class="panel-title">
+			{{#ifcond ../../selected_cat this}}
+				<a href="#clothing{{@index}}" data-parent="#accordian"
+					data-toggle="collapse">
+				<span class="badge pull-right"><i
+						class="fa fa-caret-down"></i></span> {{this}}
+				</a>
+				{{else}}
+				<a href="#clothing{{@index}}" data-parent="#accordian"
+					data-toggle="collapse">
+				<span class="badge pull-right"><i
+						class="fa fa-caret-down"></i></span> {{this}}
+				</a>
+				{{/ifcond}}
+			</h4>
+		</div>
+		{{#ifcond ../../selected_cat this}}
+		<div class="panel-collapse in" id="clothing{{@index}}">
+		<div class="panel-body">
+			<ul>
+			{{#eachSubmenu ../../../this ../this}}
+			{{#each value}}
+				<li><a href="javascript:void(0)" onclick="products.changeCategory(this, '{{esc ../../../../../selected_cat}}','{{esc ../../this}}','{{esc this}}')">{{this}}</a></li>
+			{{/each}}
+			{{/eachSubmenu}}
+			</ul>
+		</div>
+		</div>
+		{{else}}
+		<div class="panel-collapse collapse" id="clothing{{@index}}">
+		<div class="panel-body">
+			<ul>
+			{{#eachSubmenu ../../../this ../this}}
+			{{#each value}}
+				<li><a href="javascript:void(0)" onclick="products.changeCategory(this, '{{esc ../../../../../selected_cat}}','{{esc ../../this}}','{{esc this}}')">{{this}}</a></li>
+			{{/each}}
+			{{/eachSubmenu}}
+			</ul>
+		</div>
+		</div>
+		{{/ifcond}}
+	</div>{{else}}<div class="panel panel-default"><div class="panel-heading">
+			<h4 class="panel-title">
+			{{#ifcond ../../selected_cat this}}
+				<a href="javascript:void(0)" onclick="products.changeCategory(this, '{{esc ../../selected_cat}}','{{esc ../this}}','{{esc this}}')" class="activelink">{{this}}</a>
+			{{else}}
+				<a href="javascript:void(0)" onclick="products.changeCategory(this, '{{esc ../../selected_cat}}','{{esc ../this}}','{{esc this}}')">{{this}}</a>
+			{{/ifcond}}
+			</h4>
+		</div>
+	</div>{{/ifsubmenu}}{{/each}}</div>
+	
+	<div id="refine" class="hide hidden-xs">
+	<h2 style="display:none;">Refine By</h2>
+	{{#iflist PRICE}}
+	<div class="price-panel">
+		<h3>Price <a onclick="products.clearFilter('price-panel')"  class="pull-right hide" style="font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+		<ul style='padding: 0; margin: 0'>
+			{{#each PRICE}}
+			<li id="fp_{{@index}}" onclick="products.applyFilter(this)"><a href="javascript:void(0)">{{this.value}}</a></li>
+			{{/each}}
+			<li>$<input type="text" maxlength="9" name="low-price"
+				id="low-price" value="" style="width: 50px"> &nbsp; to $<input
+				type="text" maxlength="7" name="high-price" id="high-price" value=""
+				style="width: 50px"> <input type="image" align="absbottom"
+				title="Go" alt="Go" src="images/site/go.png" onclick="products.reloadPage()">
+			</li>
+		</ul>
+	</div>
+	{{/iflist}}
+	{{#iflist COLOR}}
+	<div class="color-panel">
+		<h3>Color <a onclick="products.clearFilter('color-panel')"   class="pull-right hide" style="font-weight:normal;color:rgb(198, 59, 54);" href="javascript:void(0)">Clear</a></h3>
+		<ul>
+		{{#each COLOR}}
+			<li  id="fc_{{@index}}"  onclick="products.applyFilter(this)"><a href="javascript:void(0);" style='background-color: #{{this.value}}'></a></li>
+		{{/each}}
+		</ul>
+	</div>
+	{{/iflist}}
+	</div>
+	
+</script>

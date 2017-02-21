@@ -1,0 +1,22 @@
+<script type="text/x-handlebars-template">
+	<div id="modal_content" class="modal_content modal-dialog modal-lg" style="max-width:500px; width:100%;opacity: 1; margin:30px auto; padding: 25px 30px 0 30px;min-width:320px;" data-type="{{type}}" data-msg="{{msg}}" data-merchant="{{merchant}}" data-image="{{image_url}}" data-url="{{url}}">
+		<div class="modal_header clearfix">
+			<p>
+				<a href="shops.html?token={{token}}&amp;id={{merchant_id}}">{{merchant}}</a>
+			</p>
+			<a href="javascript:void(0);" id="modal_close" data-dismiss="modal">Close<i>X</i></a>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="modal_pic col-xs-12">
+					<img width="100%" src="{{image_url}}" >
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer" style="text-align:left; padding-left:0">
+			{{#if msg}}<p>{{{msg}}}</p>{{/if}}
+			<a target="_ext" href="{{url}}"><i class="fa fa-globe"></i> Website &nbsp;</a>
+			<share-button class="sb"></share-button>
+		</div>
+	</div>
+</script>

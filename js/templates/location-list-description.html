@@ -1,0 +1,12 @@
+{{#location}}
+<li data-markerid="{{markerid}}">
+	<div class="list-label">{{marker}}</div>
+	<div class="list-details">
+		<div class="list-content">
+			<div class="loc-addr">{{street}}</div> 
+			<div class="loc-addr3">{{city}}{{#if city}},{{/if}} {{state}} {{pin}}</div>
+			<div class="loc-phone">{{#if phone}}<i class="fa fa-phone"> </i>{{/if}} {{phone}}</div>
+		</div>
+	</div>
+</li>
+{{/location}}

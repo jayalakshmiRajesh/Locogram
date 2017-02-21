@@ -1,0 +1,45 @@
+<script type="text/x-handlebars-template">
+<div id="information">
+<ul class="nav navbar-nav">
+	{{#each category}}​
+		{{#ifsubmenu ../this this}}
+		<li class="dropdown yamm-fw open-nav"><a class="dropdown-toggle"
+			data-toggle="dropdown" href="#">{{this}}<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="yamm-content">
+						<div class="container">
+							<div class="row">
+								<div
+									class="col-offset-lg-1 col-offset-md-1  col-offset-sm-1 col-lg-2 col-md-2 col-sm-2 col-xs-12">
+									<h5 class="hidden-xs">{{this}}:</h5>
+									<ul>
+										{{#eachSubmenu ../../this this}}
+										{{#each value}}
+										<li><a href="javascript:void(0)" onclick="changeMenuPage('{{../../../../token}}', '{{../../this}}', '{{this}}')">{{this}}</a></li>
+ 										{{/each}}
+										{{/eachSubmenu}}
+									</ul>
+								</div>
+								<div
+									class="hidden-xs pull-right col-lg-offset-1 col-md-offset-2 col-lg-8 col-md-7 col-sm-9 col-xs-12">
+									<div class="new_item">
+										{{#eachSubmenu ../../images this}}
+										<img height:"350px"
+											src="{{value}}" />
+										{{/eachSubmenu}}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</li> 
+		{{else}}
+		<li><a href="products.html?q={{this}}">{{this}}</a></li> 
+		{{/ifsubmenu}}
+	{{/each}}
+</ul>
+</div>
+</script>

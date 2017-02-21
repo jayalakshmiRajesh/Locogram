@@ -1,0 +1,38 @@
+<script type="text/x-handlebars-template">
+	
+		<div class="col-xs-12  col-sm-7">
+			<h2>{{name}}</h2>
+			{{#if brief_info}} <span>{{brief_info}}</span> <br> <br>
+			{{/if}}
+			
+			<span>
+			{{#if Favorite}}<a href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" 
+				data-type="shop" ><i
+							class="fa fa-times fa-lg"></i> Remove From My Mall{{else}}
+							<a href="javascript:void(0);" onclick="$.favorite(this)" data-fav="{{Favorite}}" data-id="{{id}}" 
+				data-type="shop" ><i class="fa fa-plus fa-lg"></i> Add To My Mall{{/if}}</a>
+			</span><br>
+					 
+			{{#if email}} <span> <a href="mailto:{{email}}"><i
+					class='fa fa-envelope-o'></i> {{email}}</a><br>
+			</span> {{/if}} {{#if url}} <span><a href="{{url}}" target="_ext"><i
+					class='fa fa-external-link'></i> {{url}}</a> </span> {{/if}}
+			
+		</div>
+		{{#iflist locations}}
+		<div class="col-xs-12 col-sm-5 col-md-3 pull-right">
+			<div class="address ">
+			<strong>Address:</strong><br>{{locations.0.street}} <br>
+			{{locations.0.city}} {{locations.0.state}} {{locations.0.pin}} <br>
+			{{#if locations.0.phone}} <i class="fa fa-phone"> </i>
+			{{locations.0.phone}} <br> {{/if}}
+			<div class="bh-sl-form-container" style='border-top: 1px solid #999; margin-top: 3px;'>
+				{{#ifgreater locations.length 1}} ({{locations.length}} more
+				locations)<br> {{/ifgreater}} <a href="#" id="bh-sl-submit" ><i
+					class="fa fa-map-marker"> </i> View on map</a>
+			</div>
+			</div>
+		</div>
+		{{/iflist}}
+	
+</script>

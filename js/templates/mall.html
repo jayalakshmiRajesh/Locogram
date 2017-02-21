@@ -1,0 +1,25 @@
+<script type="x-handlebars-template">
+{{#each malls}}
+<div class="pin">
+	<div style="height:160px; background: url('{{image_url}}'); background-size: cover; z-index: 10;">
+		<a href="mall.html?token={{../token}}&amp;id={{id}}">
+		<!--<img attr="{{getimageheight 255 image_width image_height }}" width="255" height=160 
+			src="{{image_url}}" />-->
+		<div class="header">
+			<div class="photo">
+				<img class="avatar" src="{{photo_url}}" style="z-index:1000"/>
+			</div>
+		</div>
+		<div class="black-overlay" style="height:160px;"></div>
+		</a>
+	</div>
+		<div class="pin_desc">
+		<a href="shops.html?token={{../token}}&amp;id={{id}}"><span>{{name}}</span></a>
+		<a style="float:right;" href="javascript:void(0);" data-id="{{id}}" >{{no_views}} <i
+							class="fa fa-eye"></i></a>
+		<a style="float:right;" href="javascript:void(0);" data-id="{{id}}" >{{no_followers}} <i
+							class="fa fa-users"></i>&nbsp;</a>
+		</div>
+	</div>
+	{{/each}}
+	</script>
